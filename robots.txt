@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Sitemap: https://tkachev-pro.github.io/sitemap.xml
+Host: tkachev-pro.github.io
