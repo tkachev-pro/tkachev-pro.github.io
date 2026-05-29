@@ -15,6 +15,11 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        /* Добавили плавную прокрутку по якорям */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--dark-bg);
             color: white;
@@ -138,7 +143,17 @@
             margin-bottom: 15px;
         }
 
-        /* Специфичные стили для списка технологий в стек-карточках */
+        /* Дополнительный стиль для цен в услугах */
+        .price {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            width: 100%;
+        }
+
         .tech-list {
             list-style: none;
             text-align: left;
@@ -316,6 +331,30 @@
                 <img src="logo_avm_clean.png" alt="Logo AVM">
                 <h4>AVM Branding</h4>
                 <p>Строгий технический стиль и чистота линий.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- НОВАЯ СЕКЦИЯ: УСЛУГИ -->
+    <section id="services">
+        <h2>Услуги</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>Web-Разработка</h4>
+                <p>Создание современных корпоративных сайтов, лендингов и интернет-магазинов. Высокая скорость загрузки, адаптивность и чистый код.</p>
+                <div class="price">от 30 000 ₽</div>
+            </div>
+            
+            <div class="card">
+                <h4>Системный анализ и ТЗ</h4>
+                <p>Проектирование логики вашего продукта, построение архитектуры баз данных и создание подробного технического задания для разработки.</p>
+                <div class="price">от 20 000 ₽</div>
+            </div>
+
+            <div class="card">
+                <h4>Айдентика и Дизайн</h4>
+                <p>Разработка уникальных логотипов, фирменного стиля, дизайна визиток и полиграфии, которые выделят ваш бренд среди конкурентов.</p>
+                <div class="price">от 15 000 ₽</div>
             </div>
         </div>
     </section>
