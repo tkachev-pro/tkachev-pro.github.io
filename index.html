@@ -101,7 +101,7 @@
         .card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             transition: 0.4s;
             text-align: center;
@@ -126,15 +126,40 @@
 
         .card h4 {
             color: var(--gold);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 1.1rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .card p {
             color: var(--text-gray);
             font-size: 0.85rem;
             margin-bottom: 15px;
+        }
+
+        /* Специфичные стили для списка технологий в стек-карточках */
+        .tech-list {
+            list-style: none;
+            text-align: left;
+            width: 100%;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .tech-list li {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .tech-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
         }
 
         .work-link {
@@ -167,7 +192,7 @@
 
         @media (max-width: 992px) {
             .grid { grid-template-columns: 1fr; }
-            nav { display: flex; flex-direction: column; }
+            nav { display: flex; flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -179,6 +204,7 @@
         </div>
         <nav>
             <a href="#services">Услуги</a>
+            <a href="#stack">Технический стек</a>
             <a href="#works">Мои работы</a>
             <a href="#reviews">Отзывы</a>
             <a href="#contact">Контакты</a>
@@ -188,6 +214,44 @@
     <section class="hero">
         <h1>Создаю цифровое превосходство</h1>
         <p>Профессиональная разработка систем, уникальный дизайн и современные решения для вашего бизнеса.</p>
+    </section>
+
+    <!-- ВОССТАНОВЛЕННАЯ СЕКЦИЯ: ТЕХНИЧЕСКИЙ СТЕК -->
+    <section id="stack">
+        <h2>Технический стек</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>Системный анализ</h4>
+                <p>Проектирование сложных архитектур и бизнес-логики.</p>
+                <ul class="tech-list">
+                    <li>Проектирование БД (SQL/NoSQL)</li>
+                    <li>UML/BPMN моделирование</li>
+                    <li>Написание ТЗ и документации</li>
+                    <li>API Design (REST, SOAP)</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h4>Разработка</h4>
+                <p>Создание быстрых и отказоустойчивых интерфейсов.</p>
+                <ul class="tech-list">
+                    <li>HTML5 / CSS3 (SCSS)</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Git / GitHub / CI-CD</li>
+                    <li>Deploy & Optimization</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4>Специализация</h4>
+                <p>Ниши, в которых я обеспечиваю максимальный рост.</p>
+                <ul class="tech-list">
+                    <li>E-commerce платформы</li>
+                    <li>Системы автоматизации</li>
+                    <li>Продуктовый дизайн</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="works">
